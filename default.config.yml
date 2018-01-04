@@ -18,53 +18,45 @@ dotfiles_files:
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
-  - autoconf
   - bash-completion
   - chromedriver
-  - doxygen
-  - gettext
   - gifsicle
   - git
   - go
-  - gpg
   - hub
   - httpie
-  - iperf
-  - libevent
+  - rcm
   - sqlite
-  - mcrypt
-  - nmap
-  - node
-  - nvm
   - ssh-copy-id
-  - cowsay
-  - readline
-  - openssl
-  - pv
+  - tmux
+  - tree
   - wget
-  - wrk
 
 homebrew_taps:
   - homebrew/core
   - caskroom/cask
   - homebrew/php
+  - thoughtbot/formulae
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
+  - atom
+  - battle-net
+  - datagrip
   - docker
   - dropbox
-  # - fing # Download link keeps getting changed, d'oh!
   - firefox
+  - google-backup-and-sync
   - google-chrome
-  - handbrake
-  - licecap
-  - limechat
-  - macvim
-  - sequel-pro
+  - iterm2
+  - intellij-idea
+  - kindle
   - skitch
   - slack
-  - sublime-text
+  - steam
+  - spectacle 
   - transmit
+  - tunnelblick
   - vagrant
   - virtualbox
 
@@ -90,10 +82,9 @@ npm_packages: []
   # - name: webpack
   #   state: present # present/absent/latest, default: present
   #   version: "^2.6" # default: N/A
-pip_packages: []
-  # - name: mkdocs
-  #   state: present # present/absent/latest, default: present
-  #   version: "0.16.3" # default: N/A
+pip_packages:
+  - name: mkdocs
+    state: latest 
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
